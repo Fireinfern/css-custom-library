@@ -1,0 +1,193 @@
+:root {
+    --mono-font: 'Roboto Mono';
+    --custom-font: 'Roboto';
+    --main-color: hsla(190, 60%, 64%, 1.0);
+    --special-color: hsla(190, 60%, 20%, 1.0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--mono-font), monospace;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+/**--------------------------------------------
+ *               Animations
+ *---------------------------------------------**/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/**--------------------------------------------
+ *               Display Helpers
+ *---------------------------------------------**/
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window-size {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    width: 80%;
+    margin: 0px 20px;
+}
+
+[extra-margin] {
+    margin-top: 2rem;
+}
+
+/**--------------------------------------------
+ *               Section
+ *---------------------------------------------**/
+
+
+
+/**--------------------------------------------
+ *               Text Stuff
+ *---------------------------------------------**/
+
+[italic], italic {
+    font-style: italic;
+}
+
+[oblique], oblique{
+    font-style: oblique;
+}
+
+[strong], strong {
+    font-weight: bolder;
+}
+
+[bold], bold {
+    font-weight: bold;
+}
+
+[light], light {
+    font-weight: lighter;
+}
+
+[normal] {
+    font-weight: normal;
+}
+
+[super] {
+    font-size: larger;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+[uppercase] {
+    text-transform: uppercase;
+}
+
+[lowercase] {
+    text-transform: lowercase;
+}
+
+[small-caps] {
+    font-variant-caps: small-caps;
+}
+
+/**--------------------------------------------
+ *               Navbar
+ *---------------------------------------------**/
+
+#navbar {
+    height: 100vh;
+    background-color: var(--main-color);
+}
+
+.navbar-title{
+    padding: 1rem;
+    padding-top: 2rem;
+    background-color: var(--main-color);
+}
+
+.navbar-item {
+    padding: 0.5rem 1rem;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.navbar-item:hover {
+    background-color: var(--special-color);
+}
+
+/**--------------------------------------------
+ *               Card
+ *---------------------------------------------**/
+
+.card {
+    margin: 1rem;
+    border-radius: 5px;
+    background-color: var(--main-color);
+}
+
+.card-title, .card-subtitle, .card-content {
+    padding:0px 1rem;
+}
+
+.card-title {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: inherit;
+}
+
+[card-bottom-padding]{
+    padding-bottom: 1rem;
+}
+
+
+/**--------------------------------------------
+ *               Aplication
+ *---------------------------------------------**/
+
+.css-display {
+    border-radius: 5px;
+    width: 100%;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+}
+
+/**--------------------------------------------
+ *               Grid
+ *---------------------------------------------**/
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
